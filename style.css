@@ -1,0 +1,86 @@
+body {
+    background-color: #f8f9fa;
+    color: #67645e;
+    font-family: Montserrat, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
+    font-optical-sizing: auto;
+    font-style: normal;
+}
+
+.custom-card {
+    background-color: #e5e5e59f;
+    border-radius: 16px;
+    padding: 24px;
+    margin-bottom: 24px;
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.custom-card:hover {
+    transform: scale(1.02); 
+    background-color: #e5e5e5d5; 
+}
+
+.card-title {
+    font-weight: 600;
+}
+
+
+.link a {
+    color: #b180e9;
+    text-decoration: none; 
+}
+
+.button {
+    color: inherit; 
+    text-decoration: none; 
+}
+
+.bold {
+    color: #312f2bc2; 
+    font-weight: bold;
+
+}
+
+.link a:hover, .link a:hover i {
+    color: #792bd3; 
+}
+
+/* Dark mode */
+.dark-mode {
+    background-color: #8a867e; 
+    color: #67645e;
+}
+
+.dark-mode .bold {
+    background-color: #67645eec !important;
+    color: #e5e5e5e1 !important;
+}
+
+.dark-mode .custom-card {
+    background-color: #67645e;
+    color: #e5e5e5e1;
+}
+
+.dark-mode a {
+    color: #b180e9d0 !important;
+}
+
+.dark-mode a:hover {
+    color: #792bd3 !important;
+}
+
+.dark-mode .button {
+    color: inherit !important;
+    text-decoration: none !important;
+}
+
+#dustCanvas {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    pointer-events: none; /* Para que no bloquee clicks */
+    z-index: -1; /* Detrás de todo el contenido */
+}
+ 
+

@@ -1,0 +1,242 @@
+<!doctype html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Julia Menardi</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    
+</head>
+
+<body>
+<canvas id="dustCanvas"></canvas>
+<div class="container-fluid px-5 py-4">
+
+     <!--BARRA SUPERIOR -->
+            <nav>
+                <div class="inter d-flex justify-content-between align-items-center m-6">
+                    <div class="d-flex">
+                        <button id="lang-toggle" class="btn btn-outline-dark btn-sm m-2">ES / EN</button>
+                        <button id="dark-mode-toggle" class="btn btn-outline-dark btn-sm m-2">Dark Mode</button>
+                        
+                    </div>
+
+                    <div class="d-flex">
+                        <button id="home" class="btn btn-outline-dark btn-sm m-2">
+                            <a href="inicio.html" class="button">Home</a>
+                        </button>
+                        <button id="projects" class="btn btn-outline-dark btn-sm m-2">
+                            <a href="proyectos.html" class="button">Proyectos</a>
+                        </button>
+                        <button id="contactme" class="btn btn-outline-dark btn-sm m-2">
+                            <a href="contactame.html" class="button">Contáctame</a>
+                        </button>
+                    </div>
+                </div>
+            </nav>
+
+
+    <!--INFO PERSONAL -->
+    <div class="custom-card text-center">
+        <h1>Julia Menardi</h1>
+        <h5 class="mb-3">Desarrolladora de aplicaciones multiplataforma</h5>
+        <hr>
+        <div class="d-flex justify-content-center flex-wrap">
+            <div class="mx-3">
+                <i class="fa fa-envelope"></i>
+                julimenardi@hotmail.com
+            </div>
+
+            <div class="mx-3 link">
+                <a href="https://www.linkedin.com/in/julia-menardi-106353206" target="_blank">Mi LinkedIn
+                    <i class="fa fa-linkedin"></i> 
+                </a>
+            </div>
+            <div class="mx-3 link">
+                <a href="https://github.com/julinm?tab=repositories" target="_blank">Mi GitHub
+                    <i class="fa fa-github"></i>
+                </a>
+            </div>
+        </div>
+    </div>
+
+    <!--DESCRIPCIÓN -->
+    <div class="custom-card">
+        <h4 class="card-title">Sobre mí</h4>
+        <p>Desarrolladora de software junior con formación en <strong>DAM</strong> y experiencia profesional en desarrollo, mantenimiento y despliegue de software en entornos de producción. </p>
+
+        <p>Tengo experiencia trabajando con código legacy y spagueti, implementando nuevas funcionalidades, corrigiendo errores y colaborando en equipos Agile. Busco la calidad, con gran atención al detalle y con una mentalidad de aprendizaje continuo, siempre buscando mejorar mis habilidades técnicas y blandas. He trabajado con Java, JavaScript, PHP, HTML, CSS y Bootstrap, bases de datos MySQL y NoSQL, control de versiones usando Git, metodologías Agile y herramientas de colaboración. También cuento con conocimientos prácticos en testing de software, incluyendo pruebas funcionales y unitarias con JUnit.</p>
+
+        <p>Mi enfoque profesional se apoya en habilidades blandas como atención al detalle, proactividad, resolución de problemas, trabajo en equipo, comunicación efectiva, adaptabilidad y aprendizaje continuo.</p>
+
+        <p>Estoy motivada para contribuir en proyectos innovadores, crecer como desarrolladora de software y aprovechar mis conocimientos técnicos y habilidades interpersonales para entregar soluciones de alta calidad en equipos dinámicos.</p>
+
+    </div>
+
+    <!-- FILA 1: PROYECTOS / EXPERIENCIA / EDUCACIÓN -->
+    <div class="row justify-content-between mb-4">
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Mi último proyecto</h4>
+                <p>OCT - DIC 2025</p>
+                <p class="bold">Recordis – Aplicación Android (Proyecto final de DAM)</p>
+                <div class="link">
+                    <a href="https://github.com/julinm/Recordis_AndroidApp" target="_blank"> Ver en GitHub
+                        <i class="fa fa-github"></i>
+                    </a>
+                </div>
+                <p>Recordis es una aplicación Android diseñada para almacenar y revivir recuerdos personales en un mapa interactivo. Los usuarios pueden agregar detalles como título, descripción, imagen, fecha, ubicación y etiquetas, creando un “mapa de vida” personal. La app cuenta con una vista de mapa con marcadores interactivos y una vista de lista con búsqueda y filtros. Cada usuario tiene una cuenta privada donde se almacenan sus recuerdos de manera segura.</p>
+                <p>Funciones principales:</p>
+                <ul>
+                    <li>Crear, editar y eliminar recuerdos.</li>
+                    <li>Mapa interactivo con marcadores y buscador.</li>
+                    <li>Vista de lista con buscador y filtros (etiquetas, fecha, favoritos, palabras clave).</li>
+                    <li>Selección de favoritos y subida de imágenes.</li>
+                    <li>Autenticación de usuarios y almacenamiento privado.</li>
+               </ul>
+               <p>Tecnologías y herramientas: Java, Android Studio, Firebase (Firestore, Storage, Authentication), Google Maps SDK, Glide, arquitectura MVVM, Git/GitHub</p>
+               <p>El proyecto es completamente funcional, con arquitectura modular usando Activities, Fragments y el patrón Repository. Ya he identificado áreas de mejora y estoy trabajando en optimizar la arquitectura, usabilidad, diseño visual y agregar nuevas funciones como respaldo de datos, recuperación de contraseña, Google Sign-In, etiquetas personalizadas y modo oscuro.</p>
+                <hr>
+
+                <div class="link">
+                    <a href="proyectos.html" target="_blank"> 
+                        <i class="fa fa-plus"></i>
+                        Aquí encontrarás más proyectos
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Experiencia laboral</h4>
+                <p>MAY 2023 – PRESENTE | AGO 2019 – NOV 2022 </p>
+                <p class="bold">Data Editor - BeSoccer  </p>
+
+                <ul>
+                    <li>Realización de pruebas funcionales en herramientas internas y plataformas web.</li>
+                    <li>Reporte de incidencias y colaboración con equipos técnicos para resolver problemas.</li>
+                    <li>Validación de la exactitud de datos y aseguramiento de la calidad del contenido.</li>
+                    <li>Trabajo en entornos de alta demanda, monitoreando hasta 40 partidos en vivo.</li>
+                    <li>Atención a usuarios y clientes vía correo electrónico y sistemas de tickets.</li>
+                    <li>Moderación de comentarios.</li>
+               </ul>
+
+                <hr>
+
+                <p>NOV 2022 - MAY 2023 </p>
+                <p class="bold">Junior Developer - BeSoccer </p>
+
+                <ul>
+                    <li>Desarrollo y mantenimiento de soluciones de software para el departamento de datos.</li>
+                    <li>Pruebas de nuevas funcionalidades y soporte en corrección de errores.</li>
+                    <li>Colaboración con equipos de desarrollo y datos siguiendo metodología Kanban.</li>
+                    <li>Mantenimiento y mejora de código legado.</li>
+                    <li>Uso de GitLab para control de versiones y colaboración en equipo.</li>
+               </ul>
+               <p>Tecnologías: PHP, MySQL, HTML, Bootstrap, JavaScript, GitLab, Expresiones regulares </p>
+
+                <hr>
+
+                <p>MAY 2022 – OCT 2022 </p>
+                <p class="bold">Trainee Developer - BeSoccer </p>
+
+                <ul>
+                    <li>Soporte en mantenimiento y pruebas de código legacy y spagueti.</li>
+                    <li>Asistencia en tareas de desarrollo y aseguramiento de calidad.</li>
+               </ul>
+               <p>Tecnologías: PHP, MySQL, HTML, Expresiones regulares.</p>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Educación</h4>
+                <p>OCT 2023 – DIC 2025</p>
+                <p class="bold">Desarrollo de Aplicaciones Multiplataforma - CIDEAD, España</p>
+
+                <ul>
+                    <li>Programación Orientada a Objetos (Java).</li>
+                    <li>Desarrollo multiplataforma con acceso a datos.</li>
+                    <li>Diseño de bases de datos y consultas - operaciones CRUD.</li>
+                    <li>Pruebas funcionales y unitarias con JUnit.</li>
+                    <li>Historias de usuario, casos de uso y validación de requisitos.</li>
+                    <li>Metodologías Agile.</li>
+                    <li>Control de versiones con Git y GitHub.</li>
+                    <li>Buenas prácticas y documentación de código.</li>
+                    <li>Implementación de proyectos, documentación, pruebas y despliegue.</li>
+                    <li>Diseño e implementación de interfaces gráficas (GUI).</li>
+                    <li>Integración de contenido multimedia y gráfico.</li>
+                    <li>Diseño web responsive.</li>
+                    <li>Conceptos básicos de seguridad.</li>
+               </ul>
+               <p>Tecnologías: Java, JavaScript, HTML, CSS, Git, PHP, MySQL, POO </p>
+
+            </div>
+        </div>
+
+    </div>
+
+    <!-- FILA 2: TECH / SOFT / IDIOMAS -->
+    <div class="row justify-content-between">
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Habilidades técnicas</h4>
+                <ul>
+                    <li>Lenguajes: Java, PHP, JavaScript.</li>
+                    <li>Web: HTML, CSS, Bootstrap.</li>
+                    <li>Bases de datos: MySQL, NoSQL.</li>
+                    <li>Control de versiones: Git.</li>
+                    <li>Metodologías: Agile / Scrum.</li>
+                    <li>Herramientas de colaboración: Trello.</li>
+                    <li>Conocimientos de testing: pruebas funcionales, unitarias con JUnit, pruebas manuales.</li>
+                    <li>Entornos de desarrollo / IDEs: Android Studio, NetBeans, Visual Studio Code.</li>
+                </ul>
+
+                <p>Estoy trabajando en ampliar mi lista :) </p>
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Otras habilidades</h4>
+                <ul>
+                    <li>Atención al detalle.</li>
+                    <li>Proactividad y resolución de problemas.</li>
+                    <li>Trabajo en equipo y comunicación.</li>
+                    <li>Adaptabilidad y aprendizaje continuo.</li>
+                    <li>Curiosidad y capacidad de investigación.</li>
+                    <li>Mentalidad orientada a objetivos.</li>
+                    <li>Habilidades organizativas.</li>
+                    <li>Atención a la experiencia de usuario.</li>
+                    <li>Iniciativa para proponer mejoras.</li>
+                </ul>
+
+            </div>
+        </div>
+
+        <div class="col-md-4">
+            <div class="custom-card h-100">
+                <h4 class="card-title">Idiomas</h4>
+                <p>Inglés: B2/C1</p>
+                <p>Español: Nativo</p>
+            </div>
+        </div>
+
+    </div>
+
+</div>
+<script src="background.js"></script>
+      <script>initParticles({r:80, g:60, b:50});</script>
+</body>
+</html>
