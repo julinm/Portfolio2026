@@ -28,12 +28,21 @@ document.addEventListener('DOMContentLoaded', () => {
 document.addEventListener('DOMContentLoaded', () => {
     const darkToggle = document.getElementById('dark-mode-toggle');
 
+
+    if(localStorage.getItem('dark-mode') === 'enabled') {
+        document.body.classList.add('dark-mode');
+        darkToggle.textContent = "Light Mode";
+    }
+
     darkToggle.addEventListener('click', () => {
         document.body.classList.toggle('dark-mode');
+
         if(document.body.classList.contains('dark-mode')) {
             darkToggle.textContent = "Light Mode";
+            localStorage.setItem('dark-mode', 'enabled'); 
         } else {
             darkToggle.textContent = "Dark Mode";
+            localStorage.setItem('dark-mode', 'disabled'); 
         }
     });
 });
@@ -53,3 +62,23 @@ document.addEventListener("DOMContentLoaded", () => {
     fadeElements.forEach(el => observer.observe(el));
 });
 
+//reveal when scroll
+document.addEventListener("DOMContentLoaded", function () {
+
+    const reveals = document.querySelectorAll(".reveal");
+
+    const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.classList.add("active");
+            }
+        });
+    }, {
+        threshold: 0.15
+    });
+
+    reveals.forEach(reveal => {
+        observer.observe(reveal);
+    });
+
+});
