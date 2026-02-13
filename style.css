@@ -83,4 +83,11 @@ body {
     z-index: -1; /* Detrás de todo el contenido */
 }
  
-
+.tag-soft {
+    background-color: #e5e5e5e1;
+    color: #67645eec;
+    border: 1px solid #67645eec;
+    padding: 4px 10px;
+    border-radius: 6px;
+    font-size: 0.75rem;
+}

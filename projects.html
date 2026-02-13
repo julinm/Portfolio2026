@@ -10,6 +10,7 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link href="https://fonts.googleapis.com/css2?family=Bellota+Text:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
         <script src="script.js"></script>
         <link rel="stylesheet" href="style.css">
     </head>
@@ -64,31 +65,47 @@
                             <i class="fa fa-github"></i>
                         </a>
                     </div>
+                     <div class="mx-3 link">
+                        <a href="assets/Julia Menardi -Developer 2026.pdf" download>
+                            Resume
+                            <i class="fa fa-download"></i>
+                            <i class="fa fa-file-pdf-o"></i>                  
+                        </a>
+                    </div>
                 </div>
             </div>
 
             <!--PROYECTOS -->
             <div class="custom-card d-flex flex-column flex-lg-row align-items-start">
                 <div class="flex-fill me-lg-3 mb-3 mb-lg-0">
-                <h4 class="card-title">RECORDIS</h4>
-                <div class="link">
-                    <a href="https://github.com/julinm/Recordis_AndroidApp" target="_blank"> Find it on GitHub
-                        <i class="fa fa-github"></i>
-                    </a>
+                    <h4 class="card-title">RECORDIS</h4>
+                    <div class="mb-3">
+                        <span class="badge tag-soft">Java</span>
+                        <span class="badge tag-soft">Android Studio</span>
+                        <span class="badge tag-soft">Firebase (Firestore, Storage, Auth)</span>
+                        <span class="badge tag-soft">Google Maps SDK for Android</span>
+                        <span class="badge tag-soft">Geocoder</span>
+                        <span class="badge tag-soft">Glide</span>
+                        <span class="badge tag-soft">Git & GitHub</span>
+                    </div>
+                    <div class="link">
+                        <a href="https://github.com/julinm/Recordis_AndroidApp" target="_blank"> Find it on GitHub
+                            <i class="fa fa-github"></i>
+                        </a>
+                    </div>
+                    <p>Recordis is an Android app designed to store and revisit personal memories on an interactive map. Users can add details such as title, description, image, date, location, and tags, creating a personal “map of life.” The app features Map View with interactive markers and List View with search and filtering options. Each user has a private account where memories are securely stored. </p>
+                    <p>Main Features:</p>
+                    <ul>
+                        <li>Create, edit, and delete memories.</li>
+                        <li>Interactive map with markers and search.</li>
+                        <li>List view with search and filters (tags, date, favorites, keywords).</li>
+                        <li>Favorites selection and image upload.</li>
+                        <li>User authentication and private storage.</li>
+                    </ul>
+                    <p>Technologies & Tools: Java, Android Studio, Firebase (Firestore, Storage, Authentication), Google Maps SDK, Glide, MVVM architecture, Git/GitHub</p>
+                    <p>The project is fully functional, with a modular architecture using Activities, Fragments, and the Repository pattern. I have already identified areas for improvement and am actively working on enhancing architecture, usability, visual design, and adding new features such as backup functionality, password recovery, Google Sign-In, custom tags, and dark mode.</p>
                 </div>
-                <p>Recordis is an Android app designed to store and revisit personal memories on an interactive map. Users can add details such as title, description, image, date, location, and tags, creating a personal “map of life.” The app features Map View with interactive markers and List View with search and filtering options. Each user has a private account where memories are securely stored. </p>
-                <p>Main Features:</p>
-                <ul>
-                    <li>Create, edit, and delete memories.</li>
-                    <li>Interactive map with markers and search.</li>
-                    <li>List view with search and filters (tags, date, favorites, keywords).</li>
-                    <li>Favorites selection and image upload.</li>
-                    <li>User authentication and private storage.</li>
-                </ul>
-                <p>Technologies & Tools: Java, Android Studio, Firebase (Firestore, Storage, Authentication), Google Maps SDK, Glide, MVVM architecture, Git/GitHub</p>
-                <p>The project is fully functional, with a modular architecture using Activities, Fragments, and the Repository pattern. I have already identified areas for improvement and am actively working on enhancing architecture, usability, visual design, and adding new features such as backup functionality, password recovery, Google Sign-In, custom tags, and dark mode.</p>
-            </div>
-            <!-- Carrusel -->
+
                 <div class="flex-shrink-0" style="max-width: 400px; min-width: 300px;">
                     <div id="recordisCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
@@ -104,35 +121,42 @@
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Images/recordis1.png" class="d-block mx-auto" style="width: 60%;" alt="Registro">
+                                <img src="Images/recordis7.png" class="d-block mx-auto" style="width: 60%;" alt="Registro">
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/recordis2.png" class="d-block mx-auto" style="width: 60%;" alt="Inicio de sesión">
+                                <img src="Images/recordis3.png" class="d-block mx-auto" style="width: 60%;" alt="Añadir recuerdo">
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/recordis3.png" class="d-block mx-auto" style="width: 60%;" alt="Home inicial">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Images/recordis4.png" class="d-block mx-auto" style="width: 60%;" alt="Añadir recuerdo">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Images/recordis5.png" class="d-block mx-auto" style="width: 60%;" alt="Ver recuerdo">
-                            </div>
-                            <div class="carousel-item ">
-                                <img src="Images/recordis6.png" class="d-block mx-auto" style="width: 60%;" alt="Vista de lista">
+                                <img src="Images/recordis4.png" class="d-block mx-auto" style="width: 60%;" alt="Ver recuerdo">
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/recordis7.png" class="d-block mx-auto" style="width: 60%;" alt="Vista de mapa">
+                                <img src="Images/recordis5.png" class="d-block mx-auto" style="width: 60%;" alt="Vista de lista">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/recordis6.png" class="d-block mx-auto" style="width: 60%;" alt="Vista de mapa">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/recordis1.png" class="d-block mx-auto" style="width: 60%;" alt="Inicio de sesión">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="Images/recordis2.png" class="d-block mx-auto" style="width: 60%;" alt="Home inicial">
                             </div>
                         </div>
                     </div>
                 </div>
             </div> 
+            
 
 
             <div class="custom-card d-flex flex-column flex-lg-row align-items-start">
                 <div class="flex-fill me-lg-3 mb-3 mb-lg-0">
                 <h4 class="card-title">ONLINE STORE - Prestashop</h4>
+                <div class="mb-3">
+                    <span class="badge tag-soft">HTML</span>
+                    <span class="badge tag-soft">CSS</span>
+                    <span class="badge tag-soft">Prestashop</span>
+                    <span class="badge tag-soft">Sql</span>
+                </div>
                 <div class="link">
                     <a href="https://metacrilatovalentin.com/" target="_blank"> Metacrilato Valentín
                         <i class="fa fa-globe"></i>
@@ -180,6 +204,11 @@
 
             <div class="custom-card">
                     <h4 class="card-title">BANK ACCOUNT - Educational assignment</h4>
+                    <div class="mb-3">
+                        <span class="badge tag-soft">Java</span>
+                        <span class="badge tag-soft">JavaDoc</span>
+                        <span class="badge tag-soft">OOP concepts</span>
+                    </div>
                     <div class="link">
                         <a href="https://github.com/julinm/Java-Bank-Account_project" target="_blank"> Find it on GitHub
                             <i class="fa fa-github"></i>
@@ -193,6 +222,10 @@
 
             <div class="custom-card">
                 <h4 class="card-title">RESERVATION SYSTEM - Educational assignment</h4>
+                <div class="mb-3">
+                    <span class="badge tag-soft">Java</span>
+                    <span class="badge tag-soft">Swing components</span>
+                </div>
                 <div class="link">
                     <a href="https://github.com/julinm/Reservation-System_project" target="_blank"> Find it on GitHub
                         <i class="fa fa-github"></i>
@@ -205,6 +238,14 @@
 
             <div class="custom-card">
                 <h4 class="card-title">Simple Chatbot</h4>
+                <div class="mb-3">
+                    <span class="badge tag-soft">PHP</span>
+                    <span class="badge tag-soft">JavaScript</span>
+                    <span class="badge tag-soft">HTML</span>
+                    <span class="badge tag-soft">CSS</span>
+                    <span class="badge tag-soft">Bootstrap</span>
+                    <span class="badge tag-soft">MySQL</span>
+                </div>
                 <div class="link">
                     <a href="https://github.com/julinm/chatbot_project" target="_blank"> Find it on GitHub
                         <i class="fa fa-github"></i>
@@ -217,6 +258,11 @@
 
             <div class="custom-card">
                 <h4 class="card-title">Calculator</h4>
+                <div class="mb-3">
+                    <span class="badge tag-soft">PHP</span>
+                    <span class="badge tag-soft">HTML</span>
+                    <span class="badge tag-soft">CSS</span>
+                </div>
                 <div class="link">
                     <a href="https://github.com/julinm/calculator_project" target="_blank"> Find it on GitHub
                         <i class="fa fa-github"></i>
@@ -224,11 +270,19 @@
                 </div>
                 <p>This is a small mini-project developed to practice basic PHP form handling and server-side logic. The project consists of a simple web calculator that allows the user to perform basic arithmetic operations between two numbers. The application processes user input through a form using the GET method and dynamically displays the result.</p>
             </div>
+            
 
             
 
         </div>
+        
         <script src="background.js"></script>
         <script>initParticles({r:80, g:60, b:50});</script>
     </body>
+
+    <footer class="footer mt-5 pt-4 pb-3">
+         <div class="text-center small">
+            © 2026 Julia Menardi — Portfolio Profesional
+        </div>
+    </footer>
 </html>
