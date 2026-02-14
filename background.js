@@ -6,23 +6,23 @@ let height = canvas.height = window.innerHeight;
 
 // Generar partículas
 const particles = [];
-const particleCount = 1000; 
+const particleCount = 1500; 
 
 for (let i = 0; i < particleCount; i++) {
     particles.push({
         x: Math.random() * width,
         y: Math.random() * height,
-        radius: Math.random() * 2 + 0.5, // tamaño de la partícula
-        alpha: Math.random() * 0.5 + 0.1, // transparencia
-        dx: (Math.random() - 0.5) * 0.2, // velocidad horizontal
-        dy: -Math.random() * 0.3 // velocidad vertical hacia arriba
+        radius: Math.random() * 2 + 0.5, 
+        alpha: Math.random() * 0.5 + 0.1, 
+        dx: (Math.random() - 0.5) * 0.2,
+        dy: -Math.random() * 0.3 
     });
 }
 
 // Animar partículas
 function initDustCanvas() {
     const canvas = document.getElementById('dustCanvas');
-    if (!canvas) return; // Si no hay canvas en esta página, no hace nada
+    if (!canvas) return; 
 
     const ctx = canvas.getContext('2d');
     let width = canvas.width = window.innerWidth;
@@ -53,7 +53,7 @@ function initDustCanvas() {
     let height = canvas.height = window.innerHeight;
 
     const particles = [];
-    const particleCount = 1000; // ajusta cantidad
+    const particleCount = 1000; // cantidad
 
     for (let i = 0; i < particleCount; i++) {
         particles.push({

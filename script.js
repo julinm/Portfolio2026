@@ -1,26 +1,34 @@
 // language
 document.addEventListener('DOMContentLoaded', () => {
     const toggleButton = document.getElementById('lang-toggle');
-    if (!toggleButton) return; // si no existe el botón, salimos
+    if (!toggleButton) return; 
 
-    const currentPage = window.location.pathname.split("/").pop();
+    let lang = localStorage.getItem('lang') || 'EN';
 
-    toggleButton.addEventListener('click', () => {
-        if(currentPage === "home.html") {
-            window.location.href = "inicio.html";
-        } else if(currentPage === "inicio.html") {
-            window.location.href = "home.html";
+    function updateButton() {
+        if(lang === 'ES') {
+            toggleButton.innerHTML = "<strong>ES</strong> / EN";
+        } else {
+            toggleButton.innerHTML = "ES / <strong>EN</strong>";
         }
-        if(currentPage === "projects.html") {
-            window.location.href = "proyectos.html";
-        } else if(currentPage === "proyectos.html") {
-            window.location.href = "projects.html";
-        }
-        if(currentPage === "contactme.html") {
-            window.location.href = "contactame.html";
-        } else if(currentPage === "contactame.html") {
-            window.location.href = "contactme.html";
-        }
+    }
+
+    updateButton();
+
+        toggleButton.addEventListener('click', () => {
+        const currentPage = window.location.pathname.split("/").pop();
+
+        // Cambia el idioma
+        lang = (lang === 'ES') ? 'EN' : 'ES';
+        localStorage.setItem('lang', lang); 
+        updateButton(); 
+
+        if(currentPage === "home.html") window.location.href = "inicio.html";
+        else if(currentPage === "inicio.html") window.location.href = "home.html";
+        else if(currentPage === "projects.html") window.location.href = "proyectos.html";
+        else if(currentPage === "proyectos.html") window.location.href = "projects.html";
+        else if(currentPage === "contactme.html") window.location.href = "contactame.html";
+        else if(currentPage === "contactame.html") window.location.href = "contactme.html";
     });
 });
 
@@ -81,4 +89,22 @@ document.addEventListener("DOMContentLoaded", function () {
         observer.observe(reveal);
     });
 
+});
+
+//whatsapp
+document.addEventListener('DOMContentLoaded', () => {
+    const wpButton = document.getElementById('wp-button');
+    wpButton.style.display = 'none'; 
+
+    window.addEventListener('scroll', () => {
+        if(window.scrollY > 200) {
+            if(wpButton.style.display === 'none') {
+                wpButton.style.display = 'flex';
+                wpButton.classList.add('bounce'); 
+                setTimeout(() => wpButton.classList.remove('bounce'), 1000); 
+            }
+        } else {
+            wpButton.style.display = 'none';
+        }
+    });
 });

@@ -3,6 +3,7 @@
     <head>
         <meta charset="UTF-8">
         <title>Julia Menardi - Inicio</title>
+        <meta name="robots" content="noindex">
         <meta name="viewport" content="width=device-width, initial-scale=1">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link href="https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap" rel="stylesheet">
@@ -10,14 +11,14 @@
             body, html {
                 height: 100%;
                 margin: 0;
-                background-color: #161212;  
+                background-color: #2f2c28;  
                 font-family: 'Inter', sans-serif;
                 display: flex;
                 justify-content: center;
                 align-items: center;
                 overflow: hidden;
                 font-family: Inter, -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen-Sans, Ubuntu, Cantarell, Helvetica Neue, sans-serif;
-
+                transition: background-color 0.8s ease;
             }
 
             .landing-container {
@@ -29,7 +30,7 @@
             #typing {
                 font-size: 2.5rem;
                 font-weight: 600;
-                color: #928c7a;
+                color: #e5e5e5b9;
                 margin-bottom: 40px;
                 white-space: pre-line;
                 min-height: 3rem; 
@@ -84,6 +85,20 @@
                 100% {opacity: 0; transform: scale(1.2);}
             }
 
+            #fadeOverlay {
+                position: fixed;
+                top: 0;
+                left: 0;
+                width: 100%;
+                height: 100%;
+                background-color: #2f2c28; /* mismo gris oscuro de la landing */
+                pointer-events: none;       /* no interfiere con botones */
+                opacity: 0;
+                transition: opacity 1s ease-in-out;
+                backdrop-filter: blur(2px);
+                z-index: 1000;              /* encima de todo */
+            }
+
 
         </style>
     </head>
@@ -97,6 +112,7 @@
             <button class="btn btn-outline-custom  btn-landing" data-link="contactme.html">Contact Me</button>
         </div>
 
+        
         <script>
             const text = "Julia Menardi \n Cross-Platform Application Developer";
             let i = 0;
@@ -127,20 +143,18 @@
             const buttons = document.querySelectorAll('.btn-landing');
             buttons.forEach(btn => {
                 btn.addEventListener('click', function() {
-                    document.body.classList.add('fade-out'); 
+                    const overlay = document.getElementById('fadeOverlay');
+                    overlay.style.opacity = 1;               // aparecer suavemente
+                    document.querySelector('.landing-container').classList.add('fade-out'); // fade-out botones
                     const link = this.getAttribute('data-link');
-                    setTimeout(() => { window.location.href = link; }, 800);
+                    setTimeout(() => { window.location.href = link; }, 600); // tiempo igual al fade
                 });
             });
+
         </script>
         <script src="background.js"></script>
         <script>initParticles({r:255, g:255, b:255});</script>
         
-
+        <div id="fadeOverlay"></div>
     </body>
-     <footer class="footer mt-5 pt-4 pb-3">
-         <div class="text-center small">
-            © 2026 Julia Menardi — Portfolio Profesional
-        </div>
-    </footer>
 </html>

@@ -4,7 +4,7 @@
         <meta charset="UTF-8">
         <title>Julia Menardi</title>
         <meta name="viewport" content="width=device-width, initial-scale=1">
-
+        <meta name="robots" content="noindex">
         <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
         <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -29,15 +29,11 @@
                     </div>
 
                     <div class="d-flex">
-                        <button id="home" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="home.html" class="button">Home</a>
-                        </button>
-                        <button id="projects" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="projects.html" class="button">Projects</a>
-                        </button>
-                        <button id="contactme" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="contactme.html" class="button">Contact Me</a>
-                        </button>
+                        <div class="d-flex">
+                            <a href="home.html" class="btn btn-outline-dark btn-sm m-2">Home</a>
+                            <a href="projects.html" class="btn btn-outline-dark btn-sm m-2">Projects</a>
+                            <a href="contactme.html" class="btn btn-outline-dark btn-sm m-2">Contact Me</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -166,35 +162,35 @@
             </div>
             <!-- Carrusel -->
                 <div class="flex-shrink-0" style="max-width: 400px; min-width: 300px;">
-                    <div id="recordisCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
+                    <div id="metacrilatoCarousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="3000">
         
                         <div class="carousel-indicators">
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="0" class="active"></button>
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="1"></button>
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="2"></button>
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="3"></button>
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="4"></button>
-                            <button type="button" data-bs-target="#recordisCarousel" data-bs-slide-to="5"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="0" class="active"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="1"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="2"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="3"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="4"></button>
+                            <button type="button" data-bs-target="#metacrilatoCarousel" data-bs-slide-to="5"></button>
                         </div>
 
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <img src="Images/metacrilato-valentin-home.jpg" class="d-block mx-auto" style="width: 60%;" alt="Registro">
+                                <img src="Images/metacrilato-valentin-home.jpg" class="d-block mx-auto" style="width: 60%;" alt="Home de la web">
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/metacrilato-valentin-quienes.jpg" class="d-block mx-auto" style="width: 60%;" alt="Inicio de sesión">
+                                <img src="Images/metacrilato-valentin-quienes.jpg" class="d-block mx-auto" style="width: 60%;" alt="Quienes somos">
                             </div>
                             <div class="carousel-item">
-                                <img src="Images/metacrilato-valentin-contacto.jpg" class="d-block mx-auto" style="width: 60%;" alt="Home inicial">
+                                <img src="Images/metacrilato-valentin-contacto.jpg" class="d-block mx-auto" style="width: 60%;" alt="Contacto">
                             </div>
                             <div class="carousel-item ">
-                                <img src="Images/metacrilato-valentin-producto.jpg" class="d-block mx-auto" style="width: 60%;" alt="Añadir recuerdo">
+                                <img src="Images/metacrilato-valentin-producto.jpg" class="d-block mx-auto" style="width: 60%;" alt="Detalle del producto">
                             </div>
                             <div class="carousel-item ">
-                                <img src="Images/metacrilato-valentin-productos.jpg" class="d-block mx-auto" style="width: 60%;" alt="Ver recuerdo">
+                                <img src="Images/metacrilato-valentin-productos.jpg" class="d-block mx-auto" style="width: 60%;" alt="Productos">
                             </div>
                             <div class="carousel-item ">
-                                <img src="Images/metacrilato-valentin-login.jpg" class="d-block mx-auto" style="width: 60%;" alt="Vista de lista">
+                                <img src="Images/metacrilato-valentin-login.jpg" class="d-block mx-auto" style="width: 60%;" alt="Login">
                             </div>
 
                         </div>
@@ -279,6 +275,17 @@
         <script src="background.js"></script>
         <script>initParticles({r:80, g:60, b:50});</script>
     </body>
+    <a id="wp-button" class="whatsapp-float" target="_blank">
+            <i class="fa fa-whatsapp"></i>
+        </a>
+        <script>
+        document.addEventListener('DOMContentLoaded', () => {
+            const wpButton = document.getElementById('wp-button');
+            const phone = '34722871216'; 
+            wpButton.href = `https://wa.me/${phone}`;
+        });
+        </script>
+
 
     <footer class="footer mt-5 pt-4 pb-3">
          <div class="text-center small">

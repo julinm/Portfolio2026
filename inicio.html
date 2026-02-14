@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <title>Julia Menardi</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="robots" content="noindex">
 
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -29,15 +30,11 @@
                     </div>
 
                     <div class="d-flex">
-                        <button id="home" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="inicio.html" class="button">Home</a>
-                        </button>
-                        <button id="projects" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="proyectos.html" class="button">Proyectos</a>
-                        </button>
-                        <button id="contactme" class="btn btn-outline-dark btn-sm m-2">
-                            <a href="contactame.html" class="button">Contáctame</a>
-                        </button>
+                        <div class="d-flex">
+                            <a href="inicio.html" class="btn btn-outline-dark btn-sm m-2">Inicio</a>
+                            <a href="proyectos.html" class="btn btn-outline-dark btn-sm m-2">Proyectos</a>
+                            <a href="contactame.html" class="btn btn-outline-dark btn-sm m-2">Contáctame</a>
+                        </div>
                     </div>
                 </div>
             </nav>
@@ -109,8 +106,9 @@
                     <li>Selección de favoritos y subida de imágenes.</li>
                     <li>Autenticación de usuarios y almacenamiento privado.</li>
                </ul>
-               <p>Tecnologías y herramientas: Java, Android Studio, Firebase (Firestore, Storage, Authentication), Google Maps SDK, Glide, arquitectura MVVM, Git/GitHub</p>
-               <p>El proyecto es completamente funcional, con arquitectura modular usando Activities, Fragments y el patrón Repository. Ya he identificado áreas de mejora y estoy trabajando en optimizar la arquitectura, usabilidad, diseño visual y agregar nuevas funciones como respaldo de datos, recuperación de contraseña, Google Sign-In, etiquetas personalizadas y modo oscuro.</p>
+               <p><u>Tecnologías y herramientas:</u> Java, Android Studio, Firebase (Firestore, Storage, Authentication), Google Maps SDK, Glide, arquitectura MVVM, Git/GitHub</p>
+               <p>El proyecto funciona correctamente.</p>
+               <p>He identificado áreas de mejora y estoy trabajando en optimizar la arquitectura, usabilidad, diseño visual y agregar nuevas funciones como respaldo de datos, recuperación de contraseña, Google Sign-In, etiquetas personalizadas y modo oscuro.</p>
                 <hr>
 
                 <div class="link">
@@ -149,7 +147,7 @@
                     <li>Mantenimiento y mejora de código legado.</li>
                     <li>Uso de GitLab para control de versiones y colaboración en equipo.</li>
                </ul>
-               <p>Tecnologías: PHP, MySQL, HTML, Bootstrap, JavaScript, GitLab, Expresiones regulares </p>
+               <p><u>Tecnologías:</u> PHP, MySQL, HTML, Bootstrap, JavaScript, GitLab, Expresiones regulares </p>
 
                 <hr>
 
@@ -160,7 +158,7 @@
                     <li>Soporte en mantenimiento y pruebas de código legacy y spagueti.</li>
                     <li>Asistencia en tareas de desarrollo y aseguramiento de calidad.</li>
                </ul>
-               <p>Tecnologías: PHP, MySQL, HTML, Expresiones regulares.</p>
+               <p><u>Tecnologías:</u> PHP, MySQL, HTML, Expresiones regulares.</p>
 
             </div>
         </div>
@@ -186,7 +184,7 @@
                     <li>Diseño web responsive.</li>
                     <li>Conceptos básicos de seguridad.</li>
                </ul>
-               <p>Tecnologías: Java, JavaScript, HTML, CSS, Git, PHP, MySQL, POO </p>
+               <p><u>Tecnologías:</u>  Java, JavaScript, HTML, CSS, Git, PHP, MySQL, POO </p>
 
             </div>
         </div>
@@ -243,8 +241,22 @@
     </div>
 
 </div>
+
+<a id="wp-button" class="whatsapp-float" target="_blank">
+    <i class="fa fa-whatsapp"></i>
+</a>
+<script>
+document.addEventListener('DOMContentLoaded', () => {
+    const wpButton = document.getElementById('wp-button');
+    const phone = '34722871216'; 
+    wpButton.href = `https://wa.me/${phone}`;
+});
+</script>
+
 <script src="background.js"></script>
-      <script>initParticles({r:80, g:60, b:50});</script>
+<script>initParticles({r:80, g:60, b:50});</script>
+
+
 </body>
 <footer class="footer mt-5 pt-4 pb-3">
         <div class="text-center small">
