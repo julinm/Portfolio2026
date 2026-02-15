@@ -144,6 +144,7 @@
             buttons.forEach(btn => {
                 btn.addEventListener('click', function(e) {
                     e.preventDefault();
+                    buttons.forEach(b => b.classList.add('fade-out'));
                     const link = this.getAttribute('data-link');
                     convergeToCenterAndRedirect(link);
                 });
