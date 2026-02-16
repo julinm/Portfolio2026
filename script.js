@@ -108,3 +108,10 @@ document.addEventListener('DOMContentLoaded', () => {
         }
     });
 });
+
+//delay en mostrar cards
+window.addEventListener("load", () => {
+    setTimeout(() => {
+        document.body.classList.remove("loading");
+    }, 500);
+});

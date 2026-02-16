@@ -6,7 +6,7 @@ let height = canvas.height = window.innerHeight;
 
 // Particulas flotantes
 const particles = [];
-const particleCount = 700;
+const particleCount = 1000;
 
 // Partículas fijas
 const stars = [];
@@ -48,14 +48,17 @@ function initParticles(particleColor) {
     // Si venimos de otra página, expandir desde el centro
     if (sessionStorage.getItem('expandParticles') === 'true') {
         particles.forEach(p => {
-            p.x = width / 2;
-            p.y = height / 2;
-            p.targetX = Math.random() * width;
-            p.targetY = Math.random() * height;
+            // Parten del centro
+                p.x = width / 2;
+                p.y = height / 2;
 
-            // Asignar velocidad inicial
-            p.dx = (Math.random() - 0.5) * 0.2;
-            p.dy = -Math.random() * 0.2;
+                // Target aleatorio en cualquier punto del canvas
+                p.targetX = Math.random() * width;
+                p.targetY = Math.random() * height;
+
+                // Mantener movimiento normal después de llegar
+                p.dx = (Math.random() - 0.5) * 0.2;
+                p.dy = -Math.random() * 0.2;
         });
         sessionStorage.removeItem('expandParticles');
     }
