@@ -39,7 +39,7 @@ for (let i = 0; i < particleCount; i++) {
         toCenter: false,
         targetX: null,
         targetY: null,
-        speedFactor: 0.05 + depth  * 0.1,  // velocidad individual
+        speedFactor: 0.05 + depth  * 0.3, 
         isBright: Math.random() < 0.3
     });
 }
@@ -111,7 +111,7 @@ function initParticles(particleColor) {
             // Atracción al mouse
             const dist = Math.hypot(p.x - mouse.x, p.y - mouse.y);
             if (dist < 90) {
-                const attraction = 0.01;
+                const attraction = 0.03;
                 p.x += (mouse.x - p.x) * attraction;
                 p.y += (mouse.y - p.y) * attraction;
             }
@@ -153,12 +153,11 @@ function initParticles(particleColor) {
 
             // Profundidad visual
             ctx.shadowBlur = p.depth * 8;
-            ctx.shadowColor = `rgba(${r}, ${g}, ${b}, ${alpha})`; // usar alpha más alto
-
-            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`; // usar alpha más alto
+            ctx.shadowColor = `rgba(${r}, ${g}, ${b}, ${alpha})`; 
+            ctx.fillStyle = `rgba(${r}, ${g}, ${b}, ${alpha})`; 
             ctx.fill();
             ctx.shadowBlur = 0;
-                    });
+        });
 
         requestAnimationFrame(animate);
     }
@@ -175,7 +174,7 @@ function initParticles(particleColor) {
 function convergeToCenterAndRedirect(link) {
     const cx = width / 2;
     const cy = height / 2;
-    const maxRadius = 100; // radio del círculo
+    const maxRadius = 75; // radio del círculo
     const vibration = 250;  // amplitud de vibración radial
     const duration = 500; // duración
 
