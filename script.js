@@ -11,16 +11,10 @@ document.addEventListener('DOMContentLoaded', function () {
     const spanishPages = ["inicio.html", "proyectos.html", "contactame.html"];
     const englishPages = ["home.html", "projects.html", "contactme.html"];
 
-    let lang;
-
-    if (spanishPages.includes(currentPage)) {
-        lang = "ES";
-    } else if (englishPages.includes(currentPage)) {
-        lang = "EN";
-    } else {
-        // 🔹 2️⃣ Fallback a localStorage
-        lang = localStorage.getItem('lang') || "EN";
-    }
+    // Determinar idioma: por página o fallback a localStorage
+    let lang = spanishPages.includes(currentPage) ? "ES" :
+               englishPages.includes(currentPage) ? "EN" :
+               localStorage.getItem('lang') || "EN";
 
     localStorage.setItem('lang', lang);
 
@@ -32,6 +26,11 @@ document.addEventListener('DOMContentLoaded', function () {
     updateUI();
 
     toggleButton.addEventListener('click', function () {
+
+        lang = (lang === "ES") ? "EN" : "ES";
+        localStorage.setItem('lang', lang);
+
+        updateUI();
 
         const routes = {
             "home.html": "inicio.html",
