@@ -1,36 +1,59 @@
-// language
-document.addEventListener('DOMContentLoaded', () => {
+document.addEventListener('DOMContentLoaded', function () {
+
     const toggleButton = document.getElementById('lang-toggle');
-    if (!toggleButton) return; 
+    if (!toggleButton) return;
 
-    let lang = localStorage.getItem('lang') || 'EN';
+    const spanES = document.getElementById('lang-es');
+    const spanEN = document.getElementById('lang-en');
 
-    function updateButton() {
-        if(lang === 'ES') {
-            toggleButton.innerHTML = "<strong>ES</strong> / EN";
+    let lang = localStorage.getItem('lang');
+
+    if (!lang) {
+        lang = 'EN';
+        localStorage.setItem('lang', lang);
+    }
+
+    function updateUI() {
+        if (lang === 'ES') {
+            spanES.classList.add('lang-active');
+            spanEN.classList.remove('lang-active');
         } else {
-            toggleButton.innerHTML = "ES / <strong>EN</strong>";
+            spanEN.classList.add('lang-active');
+            spanES.classList.remove('lang-active');
         }
     }
 
-    updateButton();
+    updateUI();
 
-        toggleButton.addEventListener('click', () => {
+    toggleButton.addEventListener('click', function () {
+
+        // Cambiar idioma
+        lang = (lang === 'ES') ? 'EN' : 'ES';
+        localStorage.setItem('lang', lang);
+
+        updateUI();
+
+        // Redirección
         const currentPage = window.location.pathname.split("/").pop();
 
-        // Cambia el idioma
-        lang = (lang === 'ES') ? 'EN' : 'ES';
-        localStorage.setItem('lang', lang); 
-        updateButton(); 
+        if (currentPage === "home.html") {
+            window.location.href = "inicio.html";
+        } else if (currentPage === "inicio.html") {
+            window.location.href = "home.html";
+        } else if (currentPage === "projects.html") {
+            window.location.href = "proyectos.html";
+        } else if (currentPage === "proyectos.html") {
+            window.location.href = "projects.html";
+        } else if (currentPage === "contactme.html") {
+            window.location.href = "contactame.html";
+        } else if (currentPage === "contactame.html") {
+            window.location.href = "contactme.html";
+        }
 
-        if(currentPage === "home.html") window.location.href = "inicio.html";
-        else if(currentPage === "inicio.html") window.location.href = "home.html";
-        else if(currentPage === "projects.html") window.location.href = "proyectos.html";
-        else if(currentPage === "proyectos.html") window.location.href = "projects.html";
-        else if(currentPage === "contactme.html") window.location.href = "contactame.html";
-        else if(currentPage === "contactame.html") window.location.href = "contactme.html";
     });
+
 });
+
 
 //dark mode
 document.addEventListener('DOMContentLoaded', () => {

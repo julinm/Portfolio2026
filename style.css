@@ -155,3 +155,7 @@ body {
 .whatsapp-float.bounce {
     animation: bounce 0.8s ease;
 }
+
+.lang-active {
+    font-weight: 900;
+}
