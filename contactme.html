@@ -78,13 +78,11 @@
                     <h1>Contact Me</h1>
 
                     <div class="d-flex justify-content-center mt-6">
-                        <form action="https://formsubmit.co/ea037e8b1343f4429841f4b56b03ed0c" method="POST">
+                      <form name="contact" netlify>
 
-                            <input type="hidden" name="_captcha" value="false">
-                            <input type="hidden" name="_subject" value="Nuevo mensaje desde tu portfolio">
-
+                            <input type="hidden" name="form-name" value="contact">
                             <div class="mb-2 text-start">
-                                <input type="text" name="name" class="form-control rounded border-0"
+                                <input type="text" name="nombre" class="form-control rounded border-0"
                                     style="width:500px; height:50px;" placeholder="Your name" required>
                             </div>
 
@@ -94,7 +92,7 @@
                             </div>
 
                             <div class="mb-2 text-start">
-                                <textarea name="message" class="form-control rounded border-0"
+                                <textarea name="mensaje" class="form-control rounded border-0"
                                     style="width:500px; height:200px;" placeholder="Your message" required></textarea>
                             </div>
 
