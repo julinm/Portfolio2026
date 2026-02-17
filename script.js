@@ -6,54 +6,48 @@ document.addEventListener('DOMContentLoaded', function () {
     const spanES = document.getElementById('lang-es');
     const spanEN = document.getElementById('lang-en');
 
-    let lang = localStorage.getItem('lang');
+    const currentPage = window.location.pathname.split("/").pop();
 
-    if (!lang) {
-        lang = 'EN';
-        localStorage.setItem('lang', lang);
+    const spanishPages = ["inicio.html", "proyectos.html", "contactame.html"];
+    const englishPages = ["home.html", "projects.html", "contactme.html"];
+
+    let lang;
+
+    if (spanishPages.includes(currentPage)) {
+        lang = "ES";
+    } else if (englishPages.includes(currentPage)) {
+        lang = "EN";
+    } else {
+        // 🔹 2️⃣ Fallback a localStorage
+        lang = localStorage.getItem('lang') || "EN";
     }
 
+    localStorage.setItem('lang', lang);
+
     function updateUI() {
-        if (lang === 'ES') {
-            spanES.classList.add('lang-active');
-            spanEN.classList.remove('lang-active');
-        } else {
-            spanEN.classList.add('lang-active');
-            spanES.classList.remove('lang-active');
-        }
+        spanES.classList.toggle('lang-active', lang === "ES");
+        spanEN.classList.toggle('lang-active', lang === "EN");
     }
 
     updateUI();
 
     toggleButton.addEventListener('click', function () {
 
-        // Cambiar idioma
-        lang = (lang === 'ES') ? 'EN' : 'ES';
-        localStorage.setItem('lang', lang);
+        const routes = {
+            "home.html": "inicio.html",
+            "inicio.html": "home.html",
+            "projects.html": "proyectos.html",
+            "proyectos.html": "projects.html",
+            "contactme.html": "contactame.html",
+            "contactame.html": "contactme.html"
+        };
 
-        updateUI();
-
-        // Redirección
-        const currentPage = window.location.pathname.split("/").pop();
-
-        if (currentPage === "home.html") {
-            window.location.href = "inicio.html";
-        } else if (currentPage === "inicio.html") {
-            window.location.href = "home.html";
-        } else if (currentPage === "projects.html") {
-            window.location.href = "proyectos.html";
-        } else if (currentPage === "proyectos.html") {
-            window.location.href = "projects.html";
-        } else if (currentPage === "contactme.html") {
-            window.location.href = "contactame.html";
-        } else if (currentPage === "contactame.html") {
-            window.location.href = "contactme.html";
+        if (routes[currentPage]) {
+            window.location.href = routes[currentPage];
         }
-
     });
 
 });
-
 
 //dark mode
 document.addEventListener('DOMContentLoaded', () => {
