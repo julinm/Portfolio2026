@@ -1,16 +1,17 @@
 const canvas = document.getElementById('dustCanvas');
 const ctx = canvas.getContext('2d');
+const isMobile = window.innerWidth <= 768;
 
 let width = canvas.width = window.innerWidth;
 let height = canvas.height = window.innerHeight;
 
 // Particulas flotantes
 const particles = [];
-const particleCount = 1000;
+const particleCount = isMobile ? 200 : 1000; 
 
 // Partículas fijas
 const stars = [];
-const starCount = 120; 
+const starCount = isMobile ? 25 : 120;
 
 // Inicializar partículas fijas
 for (let i = 0; i < starCount; i++) {
@@ -63,11 +64,21 @@ function initParticles(particleColor) {
         sessionStorage.removeItem('expandParticles');
     }
 
+    // Mouse
     let mouse = { x: width / 2, y: height / 2 };
     window.addEventListener('mousemove', e => {
         mouse.x = e.clientX;
         mouse.y = e.clientY;
     });
+
+    // Touch
+    window.addEventListener('touchmove', e => {
+        // e.touches es un array de todos los dedos tocando la pantalla
+        if(e.touches.length > 0){
+            mouse.x = e.touches[0].clientX;
+            mouse.y = e.touches[0].clientY;
+        }
+    }, { passive: true });
 
     function animate() {
         ctx.clearRect(0, 0, width, height);
