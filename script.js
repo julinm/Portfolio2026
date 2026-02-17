@@ -6,10 +6,11 @@ document.addEventListener('DOMContentLoaded', function () {
     const spanES = document.getElementById('lang-es');
     const spanEN = document.getElementById('lang-en');
 
-    const currentPage = window.location.pathname.split("/").pop();
+    // Normalizamos la URL: quitamos '.html'
+    const currentPage = window.location.pathname.split("/").pop().replace(".html", "");
 
-    const spanishPages = ["inicio.html", "proyectos.html", "contactame.html"];
-    const englishPages = ["home.html", "projects.html", "contactme.html"];
+    const spanishPages = ["inicio", "proyectos", "contactame"];
+    const englishPages = ["home", "projects", "contactme"];
 
     // Determinar idioma: por página o fallback a localStorage
     let lang = spanishPages.includes(currentPage) ? "ES" :
@@ -33,20 +34,21 @@ document.addEventListener('DOMContentLoaded', function () {
         updateUI();
 
         const routes = {
-            "home.html": "inicio.html",
-            "inicio.html": "home.html",
-            "projects.html": "proyectos.html",
-            "proyectos.html": "projects.html",
-            "contactme.html": "contactame.html",
-            "contactame.html": "contactme.html"
+            "home": "inicio",
+            "inicio": "home",
+            "projects": "proyectos",
+            "proyectos": "projects",
+            "contactme": "contactame",
+            "contactame": "contactme"
         };
 
         if (routes[currentPage]) {
-            window.location.href = routes[currentPage];
+            window.location.href = `/${routes[currentPage]}`;
         }
     });
 
 });
+
 
 //dark mode
 document.addEventListener('DOMContentLoaded', () => {
